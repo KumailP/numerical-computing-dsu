@@ -28,6 +28,7 @@ errors = []
 iterations = []
 
 while h>=0:
+    value = f(x)
     presentApprox = df(x)
     error = presentApprox - pastApprox
     print(f'Iteration: {i}, Error: {error}')
@@ -43,7 +44,7 @@ while h>=0:
 print(f'Least error is: {leastError}')
 
 plt.plot(iterations, errors)
-plt.scatter(leastErrori, leastError, color='red')
+#plt.scatter(leastErrori, leastError, color='red')
 plt.xlabel('Iterations')
 plt.ylabel('Error')
 plt.show()
